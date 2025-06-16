@@ -37,7 +37,7 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => {
     options.Password.RequireDigit = false;
 })
     //.AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddUserStore<ApplicationUser>()
+    .AddUserStore<BlazorServerAppGoogleAuth.Impl.UserStore>()
     .AddSignInManager()
     .AddDefaultTokenProviders();
 
