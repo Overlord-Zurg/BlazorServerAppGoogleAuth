@@ -36,7 +36,8 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => {
     options.Password.RequireUppercase = false;
     options.Password.RequireDigit = false;
 })
-    .AddEntityFrameworkStores<ApplicationDbContext>()
+    //.AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddUserStore<ApplicationUser>()
     .AddSignInManager()
     .AddDefaultTokenProviders();
 
